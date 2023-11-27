@@ -30,6 +30,7 @@ header ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 30px;
 }
 
 header ul li {
@@ -126,18 +127,19 @@ header ul li a.active {
 
 .modest {
     width: 100%;
-    height: 65vh;
+    height: 50vh;
     border-bottom: 1px solid rgb(61, 59, 59);
 }
 
 .modest h1 {
     font-size: 30px;
-    color: black;
-    text-align: left;
-    padding-left: 170px;
-    margin: 40px 0px;
+    color: #373d44;
+    margin-left: 10px;
 }
 
+.modest-main {
+    margin-top: 50px;
+}
 .modest .left-side {
     width: 50%;
     font-size: 15px;
@@ -150,15 +152,45 @@ header ul li a.active {
 
 }
 
+.modest .left-side p{
+    color: #abadaf;
+}
+
+
 .modest .left-side .icon {
     margin-top: 30px;
     margin-bottom: 50px;
+}
 
+.social-media {
+    display: flex;
+}
+.social-media div{
+        width: 45px;
+    background-color: #c8cdd0;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    margin-left: 2px;
+}
+
+.modest-heading {
+    display: flex;
+    padding-top: 60px;
+    margin-left: 150px;
+}
+
+.modest-heading div{
+    height: 30px;
+    width: 8px;
+    background: #c8cdd0;
+}
+
+.modest-heading h1{
+    margin-left: 15px;
 }
 
 .modest .left-side .icon a {
-
-    background-color: #c8cdd0;
     color: #fff;
     margin: 0px 1px;
     padding: 10px;
@@ -166,8 +198,8 @@ header ul li a.active {
     text-decoration: none;
 }
 
-.modest .left-side .icon a:hover {
-    background-color: rgb(179, 171, 171);
+.social-media div:hover {
+    background-color: #dcdee2;
 }
 
 .modest .right-side {
@@ -178,22 +210,42 @@ header ul li a.active {
     line-height: 1.5;
 }
 
-.modest .right-side h3 {
-    font-size: 20px;
+.right-side .right-box {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.right-side .right-box .item{
+    height: 45px;
+    width: 45px;
+    background: #23b7a4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-box  .item-right {
+    margin-left: 20px;
+}
+
+.item-right h4 {
     text-transform: uppercase;
-    font-family: 'Coda';
+    margin-top: -5px;
 }
 
-.modest .right-side p {
-    font-size: 15px;
-
+.item-right p {
+    color: #999b9d;
 }
 
+.right-box .item h4 {
+    color: white;
+}
 
 /*-------------------------------- section-3 css----------------------------------- */
 .team {
     width: 100%;
-    height: 85vh; 
+    /* height: 85vh;  */
+    padding-bottom: 140px;
 }
 
 .team h1 {
@@ -249,7 +301,9 @@ header ul li a.active {
 /*-------------------------------------- section-4 css----------------------------------- */
 .lovely-work {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
+    padding: 40px 0px;
+    margin-top: 20px;
     background-color: #25383C;
 }
 
@@ -257,8 +311,8 @@ header ul li a.active {
     font-size: 30px;
     color: #fff;
     text-align: left;
-    padding-left: 170px;
-    padding-top: 40px;
+    /* padding-left: 170px; */
+    /* padding-top: 40px; */
 }
 
 .lovely-work .work {
@@ -267,18 +321,21 @@ header ul li a.active {
 }
 
 .lovely-work .work .img {
-    width: 300px;
-    height: 200px;
     padding: 5px;
 }
 
-.button {
+.lovely-work .work .img:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/pic.png);
+}
+
+.more-button {
     margin-left: 100px;
-    margin-top: 20px;
+    
 }
 
 .button .btn-1 {
-    margin-left: 32%;
+    margin-top: 40px;
+    /* margin-left: 32%; */
     text-align: center;
     display: inline-block;
     text-decoration: none;
@@ -302,7 +359,6 @@ header ul li a.active {
 /*--------------------------- section-5 css------------------------------- */
 .service {
     width: 100%;
-    height: 100vh;
     margin-bottom: 120px;
 }
 
@@ -328,41 +384,49 @@ header ul li a.active {
     text-align: center;
 }
 
+.icons div {
+    margin-top: -10px;
+}
+
 .icon-bar .icons p {
-    margin-top: 5px;
+    margin-top: 15px;
     text-align: center;
     font-size: 15px;
     line-height: 1.2;
+    color: #999b9d;
 }
 
 .icon-bar .icons img {
-    margin-left: 120px;
-    margin-bottom: 40px;
+    /* margin-left: 120px; */
+    margin-bottom: 20px;
     padding: 8px;
+    display: flex;
+}
+
+.icons .icon-box {
+    display: flex;
+    justify-content: center;
 }
 
 /* -------------------------------------sectin-6 css----------------------------------------- */
 .feature {
     width: 100%;
-    height: 90vh;
     margin: auto;
-    text-align: center;
     background-color: #25383C;
-
+    padding: 10px 0px;
+    padding-bottom: 80px;
 }
 
 .feature h1 {
     font-size: 30px;
     color: black;
     text-align: left;
-    padding-left: 170px;
-    padding-top: 40px;
     color: #fff;
 }
 
 .feature-img {
     margin-left: 150px;
-    margin-top: 5%;
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
     margin-right: 150px;
@@ -402,6 +466,7 @@ header ul li a.active {
 .google-map{
     width: 100%;
     height: 80vh;
+    margin-top: 40px;
 
 
 }
@@ -433,7 +498,7 @@ header ul li a.active {
     position: relative;
     margin-right: 150px;
     padding: 40px;
-    margin-top: -150px;
+    margin-top: -66px;
     background-color: #fff;
     box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
 }
