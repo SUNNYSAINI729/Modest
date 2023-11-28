@@ -5,6 +5,11 @@
     font-family: Anaheim;
 }
 
+:root {
+    --primary-color: #1d2126;
+    --secondary-color: #3a454d;
+  }
+
 header {
     position: relative;
     width: 100%;
@@ -14,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1d2126;
+    background-color: var(--primary-color);
 
 }
  h1{
@@ -241,7 +246,9 @@ header ul li a.active {
     color: white;
 }
 
-/*-------------------------------- section-3 css----------------------------------- */
+
+
+/*--------------------------------  TEAM MEMBER CSS START  ----------------------------------- */
 .team {
     width: 100%;
     /* height: 85vh;  */
@@ -257,6 +264,37 @@ header ul li a.active {
     text-transform: uppercase;
 }
 
+
+
+.layer .social-icon {
+    padding: 18px;
+    background-color: #23b7a4;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.social-icon a i {
+    color: white;
+    font-size: 20px;
+}
+
+.member-image {
+    display: flex;
+}
+.member-image img{
+    height: 100%;
+}
+
+.member-detail{
+    padding: 20px 15px;
+    background-color: #e1e6ea;
+}
+
+.member-detail p{
+    color: #8b9197;
+    margin-top: 5px;
+}
+
 .team .team-task{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -267,34 +305,47 @@ header ul li a.active {
     
 }
 
-.team .team-task .team-mem .image{
-    width: 221px;
-    height: 210px;
-    
-}
-.team .team-task .team-mem{
-    background-color: rgb(189, 188, 188);
+
+.team-member{
+    position: relative;
+    transition:0.5s all ease-in-out;
 }
 
-.team .team-task .team-mem h4{
-    text-align: center;
-    margin: 5px 0px;
-    font-size: 18px;
+.layer{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 42%;
+    opacity: 0;
+    transition:0.5s all ease-in-out;
+    z-index: 11;
+}
+.member-detail  h4{
+    color: black;
 }
 
-.team .team-task .team-mem p {
-    text-align: center;
-    font-size: 17px;
+.team-member:hover .member-image{
+    opacity: 0.6;
+    transition:0.5s all ease-in-out;
+} 
+
+.team-member:hover .layer{
+    opacity: 1;
+    transition:0.5s all ease-in-out;
+} 
+
+.team-member:hover .member-detail{
+    background-color: var(--secondary-color);
+    transition:0.5s all ease-in-out;
 }
 
-.team .team-task .team-mem:hover{
-    background-color: #25383C;
-    color: #fff;
-}
+.team-member:hover .member-detail h4, 
+.team-member:hover .member-detail p
+{
+    color: white;
+} 
 
-.team .team-task .team-mem .image:hover{
-    background-color: rgb(0, 0, 0);
-}
 
 
 
@@ -321,11 +372,7 @@ header ul li a.active {
 }
 
 .lovely-work .work .img {
-    padding: 5px;
-}
-
-.lovely-work .work .img:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/pic.png);
+    /* padding: 5px; */
 }
 
 .more-button {
@@ -335,6 +382,7 @@ header ul li a.active {
 
 .button .btn-1 {
     margin-top: 40px;
+    margin-bottom: 20px;
     /* margin-left: 32%; */
     text-align: center;
     display: inline-block;
@@ -354,6 +402,57 @@ header ul li a.active {
     border: 2px solid #025f50;
     background: #025f50;
     transition: 1s;
+}
+
+.work-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.work-box {
+    position: relative;
+    padding-left: 10px;
+}
+
+.work-text {
+    background-color: #292f36;
+    padding: 20px;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    width: -webkit-fill-available;
+    opacity: 0;
+}
+
+.plus-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    opacity: 0;
+}
+
+.plus-icon :first-child{
+    font-size: 40px;
+    color: white;
+}
+
+.work-text :first-child {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.work-box:hover img{
+    opacity: 0.6;
+}
+.work-box:hover .work-text,
+.work-box:hover .plus-icon {
+    opacity: 1;
+    transition: 0.5s all ease-in-out;
 }
 
 /*--------------------------- section-5 css------------------------------- */
@@ -437,6 +536,7 @@ header ul li a.active {
 
 .feature .post h3 {
     font-size: 18px;
+    font-weight: 200;
     text-transform: uppercase;
     font-family: 'Coda';
     text-align: center;
@@ -446,12 +546,13 @@ header ul li a.active {
 }
 
 .feature .post p {
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 1px;
     text-align: left;
+    line-height: 20px;
     color: #fff;
 }
 
